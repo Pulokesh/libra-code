@@ -2545,7 +2545,7 @@ def run_step3_sd_nacs_libint(params):
             # Since we have performed state-reordering we need to 
             # convert to scipy npz format now
             t2 = time.time()
-            for i in range(len(St_sds_cmatrix)-1):
+            for i in range(len(St_sds_cmatrix)):
                 St_sds[i] = data_conv.MATRIX2scipynpz( St_sds_cmatrix[i].real() )
                 sd2ci_prev = SD2CI[i]
                 sd2ci_curr = SD2CI[i+1]
